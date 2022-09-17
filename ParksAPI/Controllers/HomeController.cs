@@ -20,7 +20,7 @@ namespace ParksAPI.Controllers
 
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Animals");
+            return RedirectToAction("Index", "Parks");
         }
 
         public IActionResult Privacy()
