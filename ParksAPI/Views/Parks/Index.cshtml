@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>New Park:</h1>
+
+<form action="/parks" method="post">
+  <label for="name">Park's Name</label>
+  <input id="name" name="name" type="text">
+  <label for="year">Park's Year</label>
+  <input id="year" name="year" type="number">
+  <label for="type">Park's Type</label>
+  <input id="type" name="type" type="text">
+  <button type="submit">Go!</button>
+</form>
+
+<h1>All Parks:</h1>
+
+<ol>
+@foreach (Park park in Model)
+{
+    <ul>
+        <li>ID: @park.ParkId</li>
+        <li>Name: @park.Name</li>
+        <li>Year: @park.Year</li>
+        <li>Type: @park.Type</li>
+    </ul>
+    <a href="/Parks/Details/@(park.ParkId)"><p>View Details</p></a>
+    <br>
+}
+</ol>
