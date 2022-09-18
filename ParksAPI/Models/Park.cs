@@ -12,43 +12,43 @@ namespace ParksAPI.Models
     public int Year { get; set; }
     public string Type { get; set; }
 
-    // public static List<Park> GetParks()
-    // {
-    //   var apiCallTask = ApiHelper.GetAll();
-    //   var result = apiCallTask.Result;
+    public static List<Park> GetParks()
+    {
+      var apiCallTask = ApiHelper.GetAll();
+      var result = apiCallTask.Result;
 
-    //   JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
-    //   List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
 
-    //   return parkList;
-    // }
+      return parkList;
+    }
 
-    // public static Park GetDetails(int id)
-    // {
-    //   var apiCallTask = ApiHelper.Get(id);
-    //   var result = apiCallTask.Result;
+    public static Park GetDetails(int id)
+    {
+      var apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
 
-    //   JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-    //   Park park = JsonConvert.DeserializeObject<Park>(jsonResponse.ToString());
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      Park park = JsonConvert.DeserializeObject<Park>(jsonResponse.ToString());
 
-    //   return park;
-    // }
+      return park;
+    }
 
-    // public static void Post(Park park)
-    // {
-    //   string jsonPark = JsonConvert.SerializeObject(park);
-    //   var apiCallTask = ApiHelper.Post(jsonPark);
-    // }
+    public static void Post(Park park)
+    {
+      string jsonPark = JsonConvert.SerializeObject(park);
+      var apiCallTask = ApiHelper.Post(jsonPark);
+    }
 
-    // public static void Put(Park park)
-    // {
-    //   string jsonPark = JsonConvert.SerializeObject(park);
-    //   var apiCallTask = ApiHelper.Put(park.ParkId, jsonPark);
-    // }
+    public static void Put(Park park)
+    {
+      string jsonPark = JsonConvert.SerializeObject(park);
+      var apiCallTask = ApiHelper.Put(park.ParkId, jsonPark);
+    }
 
-    // public static void Delete(int id)
-    // {
-    //   var apiCallTask = ApiHelper.Delete(id);
-    // }
+    public static void Delete(int id)
+    {
+      var apiCallTask = ApiHelper.Delete(id);
+    }
   }
 }
