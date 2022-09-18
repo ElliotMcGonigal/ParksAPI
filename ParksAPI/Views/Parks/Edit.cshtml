@@ -1,0 +1,12 @@
+<h1>Edit Info:</h1>
+<form action="/Parks/Details/@(Model.ParkId)" method="post">
+  <label for="name">Park's Name</label>
+  <input id="name" name="name" type="text" value="@(Model.Name)">
+  <label for="year">Park's Year</label>
+  <input id="year" name="year" type="number" value="@(Model.Year)">
+  <label for="type">Park's Type</label>
+  <input id="type" name="type" type="text" value="@(Model.Type)">
+  <button type="submit">Go!</button>
+</form>
+
+<a href="/Parks/Details/@(Model.ParkId)"><p>Return to Details</p></a>
