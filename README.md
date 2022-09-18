@@ -34,7 +34,7 @@ This API will give info on a few of the state and national parks
 7. Enter 'dotnet build' into the terminal
 8. Enter 'dotnet run' into the terminal
 9. Enter 'dotnet ef database update' into the terminal
-10. Now open a browser and go to http://localhost:5003/api/Parks and see the data, or go to http://localhost:5003/swagger to view it with swagger.
+10. Now open a browser and go to http://localhost:5003/api/Parks and see the data, or go to http://localhost:5003/swagger to view it with swagger. To see more of what you can do with swagger check out https://swagger.io/tools/swagger-ui/
 ## Known Bugs
 The Views were intended to help see what I'm doing and add to the database, however that isn't fully implemented yet. Swagger is implemented, albeit with very little use yet.
 ## License
